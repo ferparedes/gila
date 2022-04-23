@@ -1,0 +1,73 @@
+$transition-tool: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+.NodeShape {        
+  $nodeShape: &;
+  margin: 40px 20px;    
+  position: relative;  
+  &:first-child {
+    margin-left: auto;
+  }  
+  &:last-child {
+    margin-right: auto;
+  }
+
+  .tools {
+    $tools: &;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+    z-index: 2;
+
+    .tool {
+      transition: $transition-tool;
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+      @at-root #{$tools}:hover .tool {
+        opacity: 1;
+      }
+
+      &.delete {
+        z-index: 10;
+        color: #ea4848;
+        margin-top: 20px;
+        @at-root #{$tools}:hover .delete {
+          margin-top: -60px;
+        }
+      }
+
+      @at-root #{$tools} .add-wrap {        
+        $add-wrap: &;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        &.right {
+          left: initial;
+          right: 0px;
+        }
+
+        .tool.add {
+          color: #4850ea;
+
+          &.left {
+            transform: translateX(20px);
+            @at-root #{$tools}:hover .add-wrap.left .add {
+              transform: translateX(-30px) !important;
+            }
+          }
+
+          &.right {
+            transform: translateX(-20px);
+            @at-root #{$tools}:hover .add-wrap.right .add {
+              transform: translateX(30px) !important;
+            }
+          }
+        }
+      }
+    }    
+  }
+}

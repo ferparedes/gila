@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Toolbar, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import './App.scss';
+import Draw from './Draw/Draw';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box sx={{ p: 2, backgroundColor: '#1462a0', color: '#fff', textAlign: 'center' }}>
+        <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+          Administrador de figuras &#127912;
+        </Typography>
+      </Box>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Draw />
+      </Box>
     </div>
   );
 }

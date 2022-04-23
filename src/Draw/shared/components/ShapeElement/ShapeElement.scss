@@ -1,0 +1,39 @@
+$shape-width: 152px;
+$shape-height: 152px;
+
+.shape-element {  
+  &.circle {    
+    width: $shape-width;
+    height: $shape-height;
+    border-radius: 50%;
+    background-color: #f8cbcb;
+    border: 1px solid red;
+  }
+
+  &.square {
+    width: $shape-width;
+    height: $shape-height;
+    background: #cbf8cb;
+    border: 1px solid green;
+  }
+
+  &.triangle {
+    width: $shape-width;
+    height: $shape-height;
+    background: blue;    
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: $shape-width - 2;
+      height: $shape-height - 2;
+      background: #cbe2f8;    
+      top: 1.5px;
+      left: 1px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+  }
+}
