@@ -23,4 +23,9 @@ npm install
 npm start
 ```
 
+### Run tests
+```shell
+npm test
+```
+
 The app runs at the url http://localhost:3000
