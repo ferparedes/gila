@@ -8,7 +8,7 @@ by Fernando Paredes
 
 ### Prerequisities
 * [npm](https://www.npmjs.com/)
-
+* [node](https://nodejs.org/en/)
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ npm install
 
 ### Running the challenge
 ```shell
-npm run serve
+npm start
 ```
 
 The app runs at the url http://localhost:3000
