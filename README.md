@@ -12,13 +12,13 @@ by Fernando Paredes
 
 ## Getting Started
 
-## Install
+### Install
 Enter to the root folder and run the following command
 ```shell
 npm install
 ```
 
-## Running the challenge
+### Running the challenge
 ```shell
 npm run serve
 ```
