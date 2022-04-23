@@ -1,4 +1,4 @@
-import { Toolbar, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import './App.scss';
 import Draw from './Draw/Draw';

@@ -16,8 +16,7 @@ function Draw() {
   const [open, setOpen] = useState<boolean>(false);
   const [currentId, setCurrentId] = useState<number>(1);
   const [direction, setDirection] = useState<NodeDirection>(NodeDirection.Default);
-  const [sourceNode, setSourceNode] = useState<INodeShape>(defaultNodeShape);
-  const [lastNodeAdded, setLastNodeAdded] = useState<number>(0);
+  const [sourceNode, setSourceNode] = useState<INodeShape>(defaultNodeShape);  
 
   useEffect(() => {
     setNodes(sortShapes());
@@ -95,8 +94,7 @@ function Draw() {
   };
 
   const handleAddShape = (newNode: INodeShape, sourceNode: INodeShape, direction: NodeDirection) => {
-    newNode.id = currentId;
-    setLastNodeAdded(newNode.id);
+    newNode.id = currentId;    
 
     if (sourceNode.type !== ShapeType.Default) {
       linkNewNode(newNode, sourceNode, direction);
